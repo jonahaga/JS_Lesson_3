@@ -17,13 +17,12 @@
                         <label for="item{{list.id}}"><a href="/todo_lists/{{list.id}}"> {{list.list_name}}</a></label>
                     </div>
                 {% endfor %}
-
-                <form id="todo_list_form" method="POST">
-                    <input type="text" name="todo_list_name"></input>
-                    <input type="submit" id="form_submit" value="Create new list"></input>
-                </form>
-
             </div>
+            <form id="todo_list_form" method="POST">
+                <input type="text" name="todo_list_name"></input>
+                <input type="submit" id="form_submit" value="Create new list"></input>
+            </form>
+
         </div>
 
         <!-- Javascript files are already being loaded. Feel free to add more if needed -->
