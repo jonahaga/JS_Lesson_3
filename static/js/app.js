@@ -12,7 +12,7 @@ $(document).ready(function(){
         }).done(function(data){
             $('#todo-list')[0].innerHTML = data;
         }).fail(function(){
-            // console.log('fail!!!');
+            alert("fail!!!");
         });
     });
 
@@ -36,7 +36,18 @@ $(document).ready(function(){
         }).done(function(data){
             $('#todo-list')[0].innerHTML = data;
         }).fail(function(){
+            alert("fail!!!");
+        });
+    });
 
+    // Items Load Without Page Refresh
+    $(".todo-list a").on("click", function(event){
+        event.preventDefault();
+        $.ajax({
+            url: $(this).attr("href"),
+            method: "GET",
+        }).done(function(data){
+            $("body")[0].innerHTML = data;
         });
     });
 
